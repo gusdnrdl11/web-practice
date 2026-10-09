@@ -1,0 +1,281 @@
+
+/* =====================================
+   1. 전체 페이지 기본 설정
+===================================== */
+
+body.main {
+    margin: 0;
+    background-color: white;
+}
+
+/* 목차 클릭 시 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================
+   2. 제목 및 텍스트
+===================================== */
+
+/* 가상 요소: h2의 첫 글자 강조 */
+h2::first-letter {
+    color: rgb(226, 55, 55);
+    font-family: Arial, "Times New Roman", serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* 자손 선택자: 목록 안의 strong 강조 */
+ul strong {
+    color: rgb(226, 55, 55);
+    font-size: 1.1em;
+}
+
+/* 문단 스타일 */
+p {
+    text-indent: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 자세한 프로필 페이지의 제목 정렬 */
+#introduce1 h2,
+#introduce2 h2 {
+    text-align: center;
+}
+
+
+/* =====================================
+   3. 전체 레이아웃
+===================================== */
+
+/* 왼쪽 사이드바 + 오른쪽 본문 */
+.page-layout {
+    display: flex;
+    gap: 30px;
+
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    align-items: flex-start;
+}
+
+/* 오른쪽 본문 영역 */
+.profile-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =====================================
+   4. 왼쪽 사이드바
+===================================== */
+
+.sidebar {
+    box-sizing: border-box;
+    width: 270px;
+    flex-shrink: 0;
+
+    /* 스크롤해도 목차가 화면 위쪽에 유지 */
+    position: sticky;
+    top: 20px;
+
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 목차 목록 */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+/* 목차 링크 */
+.sidebar a {
+    display: block;
+    padding: 10px;
+
+    color: #0a4da1;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+/* 가상 클래스: 마우스를 올렸을 때 */
+.sidebar a:hover {
+    background-color: #0a4da1;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 목차 구분선 */
+.sidebar hr {
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 20px 0;
+}
+
+
+/* =====================================
+   5. 자세한 프로필 페이지
+===================================== */
+
+/* 프로필 사진 / 자기소개 / 일 */
+.container1,
+.container2,
+.container3 {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 30px;
+    padding: 20px;
+
+    background-color: rgb(10, 77, 161);
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+/* 프로필 제목과 사진 정렬 */
+header {
+    text-align: center;
+}
+
+header figure {
+    margin: 20px auto;
+}
+
+header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+header figcaption {
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   6. 프로필 사진 위치 지정
+===================================== */
+
+/* relative: 사진을 위치 지정의 기준으로 설정 */
+.photo-box {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* absolute: 사진 오른쪽 위에 PROFILE 표시 */
+.photo-label {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    background-color: rgb(226, 55, 55);
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-shadow: none;
+}
+
+
+/* =====================================
+   7. 작업 환경 목록
+===================================== */
+
+/* ID 선택자: 작업 환경 목록 */
+#list {
+    list-style: none; 
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px 30px 10px 20px;
+
+    background-color: white;
+    border-radius: 30px;
+}
+
+/* 자손 선택자: 목록 내부 링크 */
+#list a {
+    cursor: help;
+    text-decoration: none;
+    color: rgb(10, 77, 161);
+    text-shadow: none;
+}
+
+/* 링크에 마우스를 올렸을 때 */
+#list a:hover {
+    color: rgb(226, 55, 55);
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   8. 첫 페이지(index.html) 전용 스타일
+===================================== */
+
+/* My Profile 제목 */
+.content-header {
+    background-color: #0a4da1;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* 자기소개와 취미 박스 */
+.content-box {
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: #0a4da1;
+    color: white;
+
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+/* 첫 페이지 본문 제목 */
+.content-box h2 {
+    text-align: center;
+}
+
+/* 페이지 하단 날짜 */
+.page-footer {
+    text-align: center;
+    color: gray;
+}
+
+
+/* =====================================
+   9. 반응형 웹 디자인
+===================================== */
+
+/* 화면 너비가 700px 이하일 때 */
+@media (max-width: 700px) {
+
+    /* 가로 배치를 세로 배치로 변경 */
+    .page-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 사이드바를 본문 위에 배치 */
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    /* 본문 너비 조정 */
+    .profile-content {
+        width: 100%;
+    }
+}
