@@ -279,3 +279,111 @@ header figcaption {
         width: 100%;
     }
 }
+
+/* =====================================
+   10. sighup_1 && sighup_1 공통디자인(main_2)
+    로그인 디자인 login-layout
+    회원가입 디자인 membership-layout
+======================================== */
+
+
+body.main_2 {
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    /* 로그인과 회원가입의 공통 영역 */
+    .login-layout,
+    > div {
+        box-sizing: border-box;
+        width: 90%;
+        max-width: 400px;
+        margin: 60px auto;
+        padding: 30px;
+
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+    }
+
+    /* 로그인 페이지 제목 */
+    h4 {
+        margin: 0 0 25px;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    form {
+    text-align: center;
+}
+
+    /* 각 입력 항목 */
+    form > label {
+        display: block;
+        margin-bottom: 16px;
+        line-height: 1.6;
+        text-align: left;
+
+    }
+
+    /* 글자 입력창과 선택창 */
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 42px;
+        padding: 8px 12px;
+
+        font-size: 20px;
+        background-color: white;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+    }
+
+    
+
+    /* 입력창 클릭 시 */
+    input:focus,
+    select:focus {
+        outline: 2px solid #0a4da1;
+        outline-offset: 1px;
+    }
+
+    /* 라디오 버튼과 체크박스 */
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        accent-color: #0a4da1;
+        vertical-align: middle;
+    }
+
+    /* 로그인 및 회원가입 제출 버튼 */
+  
+    button[type="submit"],
+    input[type="submit"],
+    a {
+        display: inline-block;
+        padding: 11px 20px;
+        background-color: #0a4da1;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        /* 버튼에 마우스를 올렸을 때 */
+        button[type="submit"]:hover,
+        input[type="submit"]:hover,
+        a:hover {
+            background-color: #083b80;
+    }
+}
+
